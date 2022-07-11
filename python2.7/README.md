@@ -1,3 +1,6 @@
+# Note
+there has bug in ansible ... sometime  lineinfile scan result is differnet
+
 # Ansible Role: python2.7
 
 Centos 6.7版本中的python2.6升级到2.7
