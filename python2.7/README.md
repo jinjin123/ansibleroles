@@ -41,3 +41,33 @@ https://github.com/jimmy/Ansible-roles/tree/master/python2.7
     - hosts: server
       roles:
         - { role: python2.7, python_version: "2.7.13"}
+
+
+## fix python depends module version error
+```
+  hosts file set
+  [web:vars]
+  ansible_python_interpreter=/usr/bin/python2
+
+  or
+  - set_fact:
+    ansible_python_default_interpreter: "{{ ansible_python_interpreter }}"
+    ansible_python_interpreter:  "/usr/bin/python"
+
+- name: Ensure packages are installed.
+  yum:
+    name: "{{ item }}"
+    state: installed
+  with_items:
+    - zlib
+    - zlib-devel
+    - openssl
+    - openssl-devel
+    - python-devel
+    - "gcc"
+
+- set_fact:
+    ansible_python_interpreter: "{{ ansible_python_default_interpreter }}"
+
+
+```

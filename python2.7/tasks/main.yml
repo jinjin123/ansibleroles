@@ -27,6 +27,10 @@
   stat: path="/usr/bin/python2.6.6"
   register: python_old_link_result
 
+- set_fact:
+    ansible_python_default_interpreter: "{{ ansible_python_interpreter }}"
+    ansible_python_interpreter:  "/usr/bin/python"
+
 - name: Ensure packages are installed.
   yum:
     name: "{{ item }}"
@@ -38,6 +42,9 @@
     - openssl-devel
     - python-devel
     - "gcc"
+
+- set_fact:
+    ansible_python_interpreter: "{{ ansible_python_default_interpreter }}"
 
 - name: Copy python file to agent.
   unarchive:
