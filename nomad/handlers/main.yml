@@ -1,0 +1,9 @@
+---
+# author: jimmy
+
+- name: restart nomad
+  systemd:
+    name: nomad
+    state: restarted
+  when:
+    - ansible_service_mgr == "systemd"

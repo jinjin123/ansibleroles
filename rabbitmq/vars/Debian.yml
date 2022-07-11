@@ -1,0 +1,8 @@
+---
+# author: jimmy
+
+__package:
+  - socat
+  - logrotate
+  - init-system-helpers
+  - adduser

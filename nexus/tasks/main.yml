@@ -1,0 +1,6 @@
+---
+# author: jimmy
+
+- include: install.yml
+- include: configure.yml 
+- include: services.yml

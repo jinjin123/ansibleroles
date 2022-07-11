@@ -1,0 +1,12 @@
+---
+# author: jimmy
+
+__package:
+  - make
+  - gcc
+  - gcc-c++
+  - autoconf
+  - automake
+  - zlib 
+  - zlib-devel 
+  - pcre-devel

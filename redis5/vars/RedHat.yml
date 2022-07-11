@@ -1,0 +1,6 @@
+---
+# author: jimmy
+
+__package:
+  - gcc
+  - make

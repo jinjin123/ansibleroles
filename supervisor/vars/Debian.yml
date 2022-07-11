@@ -1,0 +1,5 @@
+---
+# author: jimmy
+
+supervisor_bin_path: /usr/local/bin/supervisord
+supervisorctl_bin_path: /usr/local/bin/supervisorctl

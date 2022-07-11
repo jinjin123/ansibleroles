@@ -1,0 +1,6 @@
+---
+# author: jimmy
+
+- name: restart tengine
+  service: name=tengine state=restarted
+  when: tengine_started

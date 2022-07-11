@@ -1,0 +1,5 @@
+---
+# author: jimmy
+
+- name: restart rabbitmq-server
+  service: name=rabbitmq-server state=restarted

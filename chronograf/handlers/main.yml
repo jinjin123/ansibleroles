@@ -1,0 +1,7 @@
+---
+# author: jimmy
+
+- name: restart chronograf
+  service:
+    name: chronograf
+    state: restarted

@@ -1,0 +1,7 @@
+---
+# author: jimmy
+
+- name: restart kafka cmak
+  service:
+    name: "{{ kafka_cmak_service_name }}"
+    state: restarted

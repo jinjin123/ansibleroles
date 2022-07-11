@@ -1,0 +1,5 @@
+---
+# author: jimmy
+
+__openjdk_packages: 
+  - "openjdk-11-jdk"
