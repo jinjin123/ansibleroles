@@ -32,8 +32,6 @@ os `Centos 6.7 X64`
 
 没有
 
-## github地址
-https://github.com/jimmy/Ansible-roles/tree/master/python2.7
 
 ## Example Playbook
 
