@@ -187,4 +187,24 @@ Python 2.7.12
 [root@node2 ~]# python -V
 Python 2.7.12
 ```
+# facts info comment
+```
+ansible_all_ipv4_addresses
+ansible_distribution_version
+ansible_distribution
+ansible_kernel
+ansible_memory_mb  内存 int(257345 / 1024)   GB
+ansible_mounts   挂载盘  int(502752256000 / 1024 /1024/1024) GB
+ansible_nodename   hostname
+ansible_processor_cores  物理核
+ansible_processor_count  CPU数量
+ansible_system_vendor  供应商
 
+
+windows disk  bug
+ANSIBLE_LOAD_CALLBACK_PLUGINS=1 ANSIBLE_STDOUT_CALLBACK=actionable ansible fetioc  -m setup  --tree ioc/
+ANSIBLE_LOAD_CALLBACK_PLUGINS=1 ANSIBLE_STDOUT_CALLBACK=actionable ansible fetall  -m ping
+- ansible ip  -m setup -a "filter=ansible_devices" ， 用ansible_devices里面的就只有本机的硬盘
+- 还有硬盘这里，最好使用总的大小，系统盘总大小+数据盘总大小。方便等保统计
+发布到rancher，对比一下镜像地址，不匹配就终止？
+```
