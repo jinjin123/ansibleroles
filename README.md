@@ -207,4 +207,12 @@ ANSIBLE_LOAD_CALLBACK_PLUGINS=1 ANSIBLE_STDOUT_CALLBACK=actionable ansible fetal
 - ansible ip  -m setup -a "filter=ansible_devices" ， 用ansible_devices里面的就只有本机的硬盘
 - 还有硬盘这里，最好使用总的大小，系统盘总大小+数据盘总大小。方便等保统计
 发布到rancher，对比一下镜像地址，不匹配就终止？
+
+###cmdb
+python -m pip install ansible-cmdb -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+ANSIBLE_LOAD_CALLBACK_PLUGINS=1 ANSIBLE_STDOUT_CALLBACK=actionable ansible fetall -m ping
+
+ansible localhost  -m setup  --tree out/
+ansible-cmdb -t json out/ > a.json
 ```
